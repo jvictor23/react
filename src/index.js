@@ -1,12 +1,19 @@
+//IMPORTAR BIBLIOTECA
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import PlayerDetails from './PlayerDetails'
+//CRIAR COMPONENTE
+const App = () => {
+    const textoBotao = "Clique aqui";
+	return <div>
+    <PlayerDetails nome="Michael Jordan" time = "Chicago Bulls" pais = "EUA"></PlayerDetails>
+    <PlayerDetails nome="Lebron James" time = "Los Angeles Lakers" pais = "EUA"></PlayerDetails>
+    <PlayerDetails nome="Koby Bryant" time = "Los Angeles Lakers" pais = "EUA"></PlayerDetails>
+    </div>;
+}
+//MOSTRAR COMPONENTE NA TELA
+ReactDOM.render(
+    <App/>,
+    document.querySelector('#root')
+  )
