@@ -3,7 +3,13 @@ import PlayerDetails from './PlayerDetails';
 
 class PlayerDetails2 extends React.Component{
     render(){
-        
+        return (
+
+            <div>
+                {this.props.jogador.nome}
+            </div>
+
+        );
     }
 }
 
