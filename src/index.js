@@ -41,16 +41,21 @@ class App extends React.Component {
     
 
     incrementarIndice = (event) =>{
-        this.setState({
-            indice: this.state.indice+1
-        })
+        
+        if(this.state.indice <= this.jogadores.length-2){
+            this.setState({
+                indice: this.state.indice+1
+            })
+        }
     }
 
     decrementarIndice = (event) =>{
 
-            this.setState({
-                indice: this.state.indice - 1
-            })
+            if(this.state.indice != 0){
+                this.setState({
+                    indice: this.state.indice - 1
+                })
+            }
         
         
     }
@@ -63,7 +68,7 @@ class App extends React.Component {
                     class="container">
                         <div class="container">
                     <h1>Jogadores</h1>
-                    {this.jogador}
+
                 </div>
 
                 <PlayerDetails2 jogador = {this.jogadores[this.state.indice]}></PlayerDetails2>
